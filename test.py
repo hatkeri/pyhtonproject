@@ -1,6 +1,6 @@
 import unittest
 import sqlite3
-import your_code  # Korvaa 'your_code' koodisi tiedoston nimellä
+import main  # Korvaa 'your_code' koodisi tiedoston nimellä
 import os
 
 class TestStudentDatabase(unittest.TestCase):
@@ -34,14 +34,14 @@ class TestStudentDatabase(unittest.TestCase):
         # Test successful login with correct username and password
         username = "admin"
         password = "password"
-        result = your_code.login(username, password)
+        result = main.login(username, password)
         self.assertEqual(result, "Login successful.")
 
     def test_login_incorrect_credentials(self):
         # Test login with incorrect username and password
         username = "wrong_user"
         password = "wrong_password"
-        result = your_code.login(username, password)
+        result = main.login(username, password)
         self.assertEqual(result, "Incorrect username or password. Please try again.")
 
     def test_add_student_success(self):
@@ -51,23 +51,15 @@ class TestStudentDatabase(unittest.TestCase):
         ssn = "987-65-4321"
         student_number = "S54321"
         image_path = "test_image2.png"
-        result = your_code.add_student(name, contact, ssn, student_number, image_path)
+        result = main.add_student(name, contact, ssn, student_number, image_path)
         self.assertEqual(result, "Student added to the database.")
 
     def test_search_student_found(self):
         # Test searching for a student when the student is found
         name = "Test Student"
-        result = your_code.search_student(name)
+        result = main.search_student(name)
         self.assertIsNotNone(result)
         self.assertEqual(result["name"], "Test Student")
 
 if __name__ == '__main__':
     unittest.main()
-
-
-
-
-
-
-
-

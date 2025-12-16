@@ -1,6 +1,5 @@
 import sqlite3
 import os
-
 # Create an SQLite database
 conn = sqlite3.connect("students.db")
 cursor = conn.cursor()
@@ -44,7 +43,7 @@ def login():
         username = input("Enter username: ")
         password = input("Enter password: ")
         
-        cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
+        cursor.execute("SELECT * FROM users WHERE username =  ? AND password = ?", (username, password))
         user = cursor.fetchone()
         
         if user:
@@ -190,6 +189,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 # Close the database connection
 conn.close()
