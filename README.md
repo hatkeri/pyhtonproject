@@ -4,7 +4,7 @@
 
 Through this group work, you will learn how to read code, search and report security vulnarabilities.  You can also try to fix some of them. 🚀
 
-## Backgroud 
+## Background 
 
 You are given a tiny program (see main.py) with text-based user interface, which allows one to store basic information on students. There are many serious flaws and vulnerabilities in the program. You will practice finding, reporting, and fixing them. Please read more background information (including assessment criteria) in Canvas.
 
